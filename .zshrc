@@ -53,3 +53,4 @@ alias ls='ls --color=auto'
 # Personal Aliases
 
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias systemconfig='git --git-dir=$HOME/.dotfiles --work-tree=/'
