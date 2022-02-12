@@ -18,4 +18,5 @@ fi
 
 # Proton and wine environment variables
 
-export STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.local/share/Steam/
+#export STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.local/share/Steam/
+#export QT_STYLE_OVERRIDE=kvantum
