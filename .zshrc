@@ -21,7 +21,7 @@ promptinit
 zstyle ':completion::complete:*' gain-privilages 1
 
 typeset -U PATH path
-path=("$HOME/.local/bin" /other/things/in/path "$path[@]")
+path=("$HOME/.local/bin" "$path[@]")
 export PATH
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
@@ -53,3 +53,5 @@ alias ls='ls --color=auto'
 # Personal Aliases
 
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+# alias data_sync='rclone sync -i --drive-skip-gdocs'
+

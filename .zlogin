@@ -1,3 +1,3 @@
 # Autostart
 
-# rclone mount GoogleDrive: ~/Google\ Drive --vfs-cache-mode full --daemon
+# rclone mount GoogleDrive: ~/Google\ Drive --daemon
