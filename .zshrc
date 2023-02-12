@@ -53,5 +53,10 @@ alias ls='ls --color=auto'
 # Personal Aliases
 
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+# Script Alias
+
+alias gdmp='~/Scripts/passwords.sh'
+alias updatetw='~/Scripts/updatetw.sh'
+alias stwp='node ~/Programs/tiddlywiki/node_modules/tiddlywiki/tiddlywiki.js ~/Documents/Programming --listen'
 # alias data_sync='rclone sync -i --drive-skip-gdocs'
 
