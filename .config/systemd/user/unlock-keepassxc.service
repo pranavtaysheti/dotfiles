@@ -1,0 +1,14 @@
+[Unit]
+Description=Unlock Keepassxc
+After=gdrivemount.service
+Requires=gdrivemount.service
+
+[Service]
+Type=simple
+ExecStart=/home/pranavtaysheti/bin/unlock-keepassxc.sh
+TimeoutStartSec=10
+RestartSec=60
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

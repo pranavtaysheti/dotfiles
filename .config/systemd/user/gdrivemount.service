@@ -1,0 +1,15 @@
+[Unit]
+Description=Rclone Google Drive Mount
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/pranavtaysheti/bin/mountdrive.sh
+ExecStop=/home/pranavtaysheti/bin/unmountdrive.sh
+TimeoutStartSec=10
+RestartSec=60
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
