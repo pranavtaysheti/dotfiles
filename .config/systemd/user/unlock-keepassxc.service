@@ -1,7 +1,5 @@
 [Unit]
 Description=Unlock Keepassxc
-After=gdrivemount.service
-Requires=gdrivemount.service
 
 [Service]
 Type=simple

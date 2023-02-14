@@ -1,3 +1,3 @@
 #!/bin/sh
 
-umount ~/Google\ Drive
+umount ~/Google\ Drive\ -\ Online

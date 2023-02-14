@@ -53,4 +53,4 @@ alias ls='ls --color=auto'
 # Personal Aliases
 
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-
+alias gdm='systemctl --user start gdrivemount.service'
