@@ -27,3 +27,5 @@ export TIDDLYWIKI_PLUGIN_PATH=~/Programs/tiddlywiki/plugins/
 export TIDDLYWIKI_THEME_PATH=~/Programs/tiddlywiki/themes/
 export TIDDLYWIKI_LANGUAGE_PATH=~/Programs/tiddlywiki/languages/
 export TIDDLYWIKI_EDITION_PATH=~/Programs/tiddlywiki/editions/
+export CHROME_EXECUTABLE=google-chrome-stable
+export MOZ_ENABLE_WAYLAND=1

@@ -8,6 +8,12 @@ endif
 
 let g:airline_powerline_fonts = 1
 let g:indent_guides_enable_on_vim_startup = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
+let g:ale_sign_column_always = 1
+let g:coc_default_semantic_highlight_groups = 1
 
 " Plugins Configuration
 
@@ -16,21 +22,22 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+Plug 'preservim/nerdtree'
+Plug 'dense-analysis/ale'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/tagbar'
 Plug 'morhetz/gruvbox'
-Plug 'zah/nim.vim'
 Plug 'tpope/vim-sensible'
 Plug 'yggdroot/indentline'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'ervandew/supertab'
+Plug 'stevearc/vim-arduino'
+Plug 'xuhdev/SingleCompile'
 
 call plug#end()
 
@@ -42,7 +49,29 @@ colorscheme gruvbox
 " Setting sane defaults
 
 set number
+set ruler
+set mouse=a
+set autoindent expandtab tabstop=2 shiftwidth=2
+syntax enable
+filetype plugin indent on
+
+" Required for coc.nvim
+
+set encoding=utf-8 
+" set nobackup
+" set nowritebackup
+" set updatetime=300
+
+" Set sane keybindings
+
 
 " Setting up plugins
 
-autocmd VimEnter * NERDTree
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Setting up Singlecompile
+
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>

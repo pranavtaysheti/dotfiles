@@ -21,7 +21,7 @@ promptinit
 zstyle ':completion::complete:*' gain-privilages 1
 
 typeset -U PATH path
-path=("$HOME/bin" "$HOME/.local/bin" "$path[@]")
+path=("$HOME/bin" "$HOME/.local/bin" "$HOME/.nimble/bin" "$path[@]")
 export PATH
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
@@ -54,3 +54,11 @@ alias ls='ls --color=auto'
 
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias gdm='systemctl --user start gdrivemount.service'
+
+# pnpm
+export PNPM_HOME="/home/pranavtaysheti/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
