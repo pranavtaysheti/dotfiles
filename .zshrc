@@ -48,7 +48,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
-alias ls='ls --color=auto'
+alias ls='lsd'
+alias ll='ls -al'
 
 # Personal Aliases
 
@@ -62,3 +63,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
