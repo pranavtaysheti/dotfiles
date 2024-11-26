@@ -16,3 +16,5 @@ export GOPATH=$HOME/go
 PATH="$PATH:$GOPATH/bin"
 export PATH
 
+#---BREW---
+export HOMEBREW_BUNDLE_FILE=".Brewfile"

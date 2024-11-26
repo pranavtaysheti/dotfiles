@@ -27,7 +27,3 @@ unset rc
 ### bling.sh source start
 test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
 ### bling.sh source end
-
-#---ALIASES---
-alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias steam="/usr/bin/distrobox-enter -n bazzite-arch -- /usr/bin/steam-runtime"
