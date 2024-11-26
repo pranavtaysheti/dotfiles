@@ -1,0 +1,4 @@
+import "/usr/share/ublue-os/justfile"
+
+install-python-packages:
+    pip install -r ~/.requirements
