@@ -12,9 +12,14 @@ export SDL_VIDEODRIVER="wayland,x11"
 # export ELECTRON_OZONE_PLATFORM_HINT="auto"
 
 #---GO---
-export GOPATH=$HOME/go
-PATH="$PATH:$GOPATH/bin"
-export PATH
+# export GOPATH=$HOME/go
+# PATH="$PATH:$GOPATH/bin"
+# export PATH
 
 #---BREW---
 export HOMEBREW_BUNDLE_FILE=".Brewfile"
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/pranavtaysheti/.local/share/JetBrains/Toolbox/scripts"
+
