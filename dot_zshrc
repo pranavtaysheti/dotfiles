@@ -42,6 +42,15 @@ source ~/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle pip
+antigen bundle chezmoi
+antigen bundle pyenv
+antigen bundle gh
+antigen bundle debian
+antigen bundle vscode
+antigen bundle zoxide
+antigen bundle ssh
 antigen bundle command-not-found
 
 # Syntax highlighting bundle.
@@ -68,5 +77,12 @@ if [ "$HOST" = "PTWL" ]; then
 
     # Starship prompt
     eval "$(starship init zsh)"
+
+    # Pyenv
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init - bash)"
+
+    eval "$(pyenv virtualenv-init -)"
 fi
 
