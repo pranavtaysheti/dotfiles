@@ -1,0 +1,3 @@
+[commands]
+"Go" = "sudo ~/update-golang/update-golang.sh"
+"Pyenv Python" = "pyenv install 3.13:latest -s"
