@@ -19,6 +19,15 @@ export PATH
 export HOMEBREW_BUNDLE_FILE=".Brewfile"
 
 
-# Added by Toolbox App
-export PATH="$PATH:/home/pranavtaysheti/.local/share/JetBrains/Toolbox/scripts"
+if [ "$HOST" = "PTAL" ]; then
 
+    # Added by Toolbox App
+    export PATH="$PATH:/home/pranavtaysheti/.local/share/JetBrains/Toolbox/scripts"
+
+fi
+
+if [ "$HOST" = "PTWL" ]; then
+
+    . "$HOME/.atuin/bin/env"
+
+fi

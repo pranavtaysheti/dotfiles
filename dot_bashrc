@@ -24,6 +24,17 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-### bling.sh source start
-test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
-### bling.sh source end
+if [ "$HOST" = "PTAL" ]; then
+	    
+    ### bling.sh source start
+    test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
+    ### bling.sh source end
+
+fi
+
+if [ "$HOST" = "PTWL" ]; then
+
+    [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+    eval "$(atuin init bash)"
+
+fi

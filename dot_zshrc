@@ -16,10 +16,10 @@ setopt COMPLETE_IN_WORD
 #setopt HUP
 
 ## history
-#setopt APPEND_HISTORY
+setopt APPEND_HISTORY
 ## for sharing history between zsh processes
-#setopt INC_APPEND_HISTORY
-#setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 
 ## never ever beep ever
 #setopt NO_BEEP
@@ -30,5 +30,42 @@ setopt COMPLETE_IN_WORD
 ## disable mail checking
 #MAILCHECK=0
 
-# autoload -U colors
-#colors
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+autoload -U colors
+colors
+
+source ~/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle pip
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
+
+# Aliases
+
+if [ "$HOST" = "PTWL" ]; then
+
+    alias ls="eza --icons=auto"
+    alias ll="ls -ll"
+    alias bat="batcat"
+
+    . "$HOME/.atuin/bin/env"
+
+    eval "$(atuin init zsh)"
+    eval "$(zoxide init zsh)"
+
+fi
