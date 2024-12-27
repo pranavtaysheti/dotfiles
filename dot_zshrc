@@ -36,7 +36,10 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 autoload -U colors
 colors
 
-source ~/antigen.zsh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
+
+source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -45,20 +48,17 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle chezmoi
-antigen bundle pyenv
 antigen bundle gh
 antigen bundle debian
 antigen bundle vscode
 antigen bundle zoxide
 antigen bundle ssh
 antigen bundle command-not-found
+antigen bundle atuinsh/atuin@main
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-
-# Load the theme.
-# antigen theme robbyrussell
 
 # Tell Antigen that you're done.
 antigen apply
@@ -68,21 +68,7 @@ if [ "$HOST" = "PTWL" ]; then
 
     alias ls="eza --icons=auto"
     alias ll="ls -ll"
-    alias bat="batcat"
 
-    . "$HOME/.atuin/bin/env"
-
-    eval "$(atuin init zsh)"
-    eval "$(zoxide init zsh)"
-
-    # Starship prompt
-    eval "$(starship init zsh)"
-
-    # Pyenv
-    export PYENV_ROOT="$HOME/.pyenv"
-    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init - bash)"
-
-    eval "$(pyenv virtualenv-init -)"
 fi
+
 
