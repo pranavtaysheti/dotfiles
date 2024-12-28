@@ -25,9 +25,3 @@ if [ "$HOST" = "PTAL" ]; then
     export PATH="$PATH:/home/pranavtaysheti/.local/share/JetBrains/Toolbox/scripts"
 
 fi
-
-if [ "$HOST" = "PTWL" ]; then
-
-    . "$HOME/.atuin/bin/env"
-
-fi

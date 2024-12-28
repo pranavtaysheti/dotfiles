@@ -36,8 +36,15 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 autoload -U colors
 colors
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 
@@ -48,12 +55,15 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle chezmoi
+antigen bundle pyenv
 antigen bundle gh
 antigen bundle debian
 antigen bundle vscode
 antigen bundle zoxide
 antigen bundle ssh
 antigen bundle command-not-found
+antigen bundle nvm
+
 antigen bundle atuinsh/atuin@main
 
 # Syntax highlighting bundle.
@@ -68,7 +78,6 @@ if [ "$HOST" = "PTWL" ]; then
 
     alias ls="eza --icons=auto"
     alias ll="ls -ll"
+    alias neofetch="fastfetch"
 
 fi
-
-
