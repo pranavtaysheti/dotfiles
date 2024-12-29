@@ -36,13 +36,14 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 autoload -U colors
 colors
 
-eval "$(starship init zsh)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+if [[ -f /home/linuxbrew/.linuxbrew/bin/brew  ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+    eval "$(starship init zsh)"
+fi
 
-source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
+source $HOME/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -51,7 +52,6 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle chezmoi
-antigen bundle pyenv
 antigen bundle gh
 antigen bundle debian
 antigen bundle vscode
@@ -74,8 +74,11 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
 # Aliases
-alias ls="eza --icons=auto"
-alias ll="ls -ll"
-alias neofetch="fastfetch"
 
+if [[ -v HOMEBREW_PREFIX ]]; then 
+    alias ls="eza --icons=auto"
+    alias neofetch="fastfetch"
+fi
+
+alias ll="ls -ll"
 alias nodeup="nvm install --reinstall-packages-from=current --latest-npm --lts --default"
