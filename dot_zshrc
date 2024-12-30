@@ -36,10 +36,12 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 autoload -U colors
 colors
 
-
 if [[ -f /home/linuxbrew/.linuxbrew/bin/brew  ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+fi
+
+if [ -x "$(which starship)" ]; then
     eval "$(starship init zsh)"
 fi
 
@@ -53,11 +55,12 @@ antigen bundle git
 antigen bundle pip
 antigen bundle chezmoi
 antigen bundle gh
-antigen bundle debian
 antigen bundle vscode
 antigen bundle zoxide
 antigen bundle ssh
 antigen bundle command-not-found
+antigen bundle direnv
+antigen bundle python
 
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
@@ -75,10 +78,10 @@ antigen apply
 
 # Aliases
 
-if [[ -v HOMEBREW_PREFIX ]]; then 
+if [[ -x "$(which eza)" ]]; then 
     alias ls="eza --icons=auto"
-    alias neofetch="fastfetch"
 fi
 
+alias neofetch="fastfetch"
 alias ll="ls -ll"
 alias nodeup="nvm install --reinstall-packages-from=current --latest-npm --lts --default"
