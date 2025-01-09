@@ -24,13 +24,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-if [ "$HOST" = "PTAL" ]; then
-	    
-    ### bling.sh source start
-    test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
-    ### bling.sh source end
-
-fi
+export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
 
 if [ "$HOST" = "PTWL" ]; then
 
@@ -38,3 +32,6 @@ if [ "$HOST" = "PTWL" ]; then
     eval "$(atuin init bash)"
 
 fi
+### bling.sh source start
+test -f /usr/share/ublue-os/aurora-cli/bling.sh && source /usr/share/ublue-os/aurora-cli/bling.sh
+### bling.sh source end
