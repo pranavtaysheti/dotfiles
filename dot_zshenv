@@ -1,0 +1,10 @@
+#---WAYLAND ENVIRONMENT VARIABLES---
+export SDL_VIDEODRIVER="wayland,x11"
+export ELECTRON_OZONE_PLATFORM_HINT="auto"
+
+#---GO---
+export GOPATH=$HOME/.local/go
+PATH="$PATH:$GOPATH/bin"
+export PATH
+#---BREW---
+export HOMEBREW_BUNDLE_FILE=".Brewfile"
