@@ -24,14 +24,3 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
-
-if [ "$HOST" = "PTWL" ]; then
-
-    [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-    eval "$(atuin init bash)"
-
-fi
-### bling.sh source start
-test -f /usr/share/ublue-os/aurora-cli/bling.sh && source /usr/share/ublue-os/aurora-cli/bling.sh
-### bling.sh source end

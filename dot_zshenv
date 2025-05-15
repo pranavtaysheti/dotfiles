@@ -6,5 +6,9 @@ export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export GOPATH=$HOME/.local/go
 PATH="$PATH:$GOPATH/bin"
 export PATH
+
 #---BREW---
 export HOMEBREW_BUNDLE_FILE=".Brewfile"
+
+#---UNIX---
+export EDITOR="nvim"
