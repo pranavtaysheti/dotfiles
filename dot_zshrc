@@ -61,6 +61,7 @@ antigen bundle ssh
 antigen bundle command-not-found
 antigen bundle direnv
 antigen bundle python
+antigen bundle pipenv
 
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
