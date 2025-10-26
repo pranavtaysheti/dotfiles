@@ -34,7 +34,6 @@ colors
 
 if [[ -f /home/linuxbrew/.linuxbrew/bin/brew  ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 fi
 
 autoload -U compinit

@@ -2,8 +2,5 @@ numpy
 scipy
 pandas
 matplotlib
-scikit-learn
-torch
-torchvision
-torchaudio
-notebook
+requests
+tqdm
