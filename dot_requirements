@@ -4,3 +4,5 @@ pandas
 matplotlib
 requests
 tqdm
+notebook
+scikit-learn
