@@ -1,5 +1,9 @@
 # .bash_profile
 
+if [ -r ~/.profile ]; then
+    . ~/.profile
+fi
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
@@ -15,13 +19,6 @@ export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export GOPATH=$HOME/.local/go
 PATH="$PATH:$GOPATH/bin"
 export PATH
+
 #---BREW---
 export HOMEBREW_BUNDLE_FILE=".Brewfile"
-
-
-if [ "$HOST" = "PTAL" ]; then
-
-    # Added by Toolbox App
-    export PATH="$PATH:/home/pranavtaysheti/.local/share/JetBrains/Toolbox/scripts"
-
-fi
