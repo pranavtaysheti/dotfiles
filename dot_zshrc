@@ -90,3 +90,4 @@ fi
 alias neofetch="fastfetch"
 alias ll="ls -ll"
 alias nodeup="nvm install --reinstall-packages-from=current --latest-npm --lts --default"
+alias clang-musl='clang --target=x86_64-linux-musl -static -march=x86-64-v3 -fuse-ld=lld -nostdinc -isystem /usr/local/musl/include/ -L /usr/local/musl/lib/'
