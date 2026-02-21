@@ -20,5 +20,5 @@ export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
 
 # GPU Acceleration on WSL2
 if [[ "$HOST" == "PTWD" ]]; then
-    export LIBVA_DRIVER_NAME=d3d12
+    export GALLIUM_DRIVER=d3d12
 fi
