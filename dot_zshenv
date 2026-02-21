@@ -19,6 +19,6 @@ export INFOPATH="/usr/local/texlive/2025/texmf-dist/doc/info:$INFOPATH"
 export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
 
 # GPU Acceleration on WSL2
-if [[ "$HOSTNAME" == "PTWS" ]]; then
+if [[ "$HOST" == "PTWD" ]]; then
     export LIBVA_DRIVER_NAME=d3d12
 fi
