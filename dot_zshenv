@@ -22,3 +22,7 @@ export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
 if [[ "$HOST" == "PTWD" ]]; then
     export GALLIUM_DRIVER=d3d12
 fi
+
+if [[ -d "$HOME/pico-sdk" ]]; then
+    export PICO_SDK_PATH="$HOME/pico-sdk"
+fi
