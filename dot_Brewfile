@@ -18,7 +18,13 @@ brew "fastfetch"
 brew "just"
 brew "direnv"
 brew "tcl-tk"
+<<<<<<< HEAD
 brew "llvm"
 brew "meson"
 brew "ninja"
 brew "terror/tap/just-lsp"
+=======
+brew "zig"
+brew "bear"
+brew "arduino-cli"
+>>>>>>> 52917e7 (Update .Brewfile)
