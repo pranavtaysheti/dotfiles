@@ -18,6 +18,9 @@ export MANPATH="/usr/local/texlive/2026/texmf-dist/doc/man:$MANPATH"
 export INFOPATH="/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH"
 export PATH="/usr/local/texlive/2026/bin/x86_64-linux:$PATH"
 
+# MUSL
+export PATH="local/musl/bin:$PATH"
+
 # GPU Acceleration on WSL2
 if [[ "$HOST" == "PTWD" ]]; then
     export GALLIUM_DRIVER=d3d12
