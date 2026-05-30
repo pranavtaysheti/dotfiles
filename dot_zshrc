@@ -66,12 +66,6 @@ antigen bundle command-not-found
 antigen bundle direnv
 antigen bundle python
 antigen bundle pipenv
-
-export NVM_AUTO_USE=true
-export NVM_COMPLETION=true
-antigen bundle lukechilds/zsh-nvm
-antigen bundle lukechilds/zsh-better-npm-completion
-
 antigen bundle atuinsh/atuin@main
 
 # Syntax highlighting bundle.
@@ -89,4 +83,7 @@ fi
 
 alias neofetch="fastfetch"
 alias ll="ls -ll"
-alias nodeup="nvm install --reinstall-packages-from=current --latest-npm --lts --default"
+
+# FNM and NodeJS
+
+eval "$(fnm env --use-on-cd --shell zsh)"
