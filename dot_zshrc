@@ -36,7 +36,7 @@ if [[ -f /home/linuxbrew/.linuxbrew/bin/brew  ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-autoload -U compinit
+autoload -Uz compinit
 compinit
 
 if [ -x "$(which starship)" ]; then
@@ -90,11 +90,3 @@ fi
 alias neofetch="fastfetch"
 alias ll="ls -ll"
 alias nodeup="nvm install --reinstall-packages-from=current --latest-npm --lts --default"
-alias clang-musl="clang \
-  --target=x86_64-linux-musl \
-  --sysroot=/usr/local/musl \
-  -static \
-  -march=x86-64-v3 \
-  -fuse-ld=lld
-  --rtlib=compiler-rt \
-  -unwindlib=libunwind"
