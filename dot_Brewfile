@@ -1,10 +1,7 @@
-brew "go"
+# Tools
 brew "chezmoi"
-brew "neovim"
-brew "pyenv"
 brew "btop"
-brew "gh"
-brew "git"
+brew "neovim"
 brew "eza"
 brew "curl"
 brew "atuin"
@@ -17,8 +14,17 @@ brew "topgrade"
 brew "fastfetch"
 brew "just"
 brew "direnv"
+
+# Developer Tools
+brew "gh"
+brew "git"
+
+# Programming Languages
+brew "go"
+brew "pyenv"
+brew "arduino-cli"
+brew "rustup"
+
+# LSP, Build Libraries
 brew "tcl-tk"
 brew "terror/tap/just-lsp"
-brew "zig"
-brew "arduino-cli"
-brew "llvm"
