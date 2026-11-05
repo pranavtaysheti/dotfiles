@@ -58,7 +58,7 @@ antigen use oh-my-zsh
 # antigen bundle command-not-found
 # antigen bundle direnv
 # antigen bundle python
-# antigen bundle atuinsh/atuin@main
+antigen bundle atuinsh/atuin@main
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
