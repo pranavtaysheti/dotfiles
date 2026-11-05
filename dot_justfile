@@ -1,5 +1,14 @@
-python-up:
+alias ds := python-datascience
+alias py-up := python-upgrade
+alias node-up := node-upgrade
+
+python-upgrade:
     uv python install 3 -U --default
 
-node-up:
+node-upgrade:
     fnm install --lts --use
+
+python-datascience:
+    cd ./DataScience
+    python
+    
