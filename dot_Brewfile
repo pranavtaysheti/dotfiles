@@ -21,9 +21,11 @@ brew "git"
 
 # Programming Languages
 brew "go"
-brew "pyenv"
 brew "arduino-cli"
 brew "rustup"
+brew "fnm"
+brew "pnpm"
+brew "uv"
 
 # LSP, Build Libraries
 brew "tcl-tk"
