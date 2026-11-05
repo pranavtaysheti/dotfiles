@@ -1,2 +1,2 @@
-install-python-packages:
-    pip install -r ~/.requirements
+python-up:
+    uv python install 3 -U --default
