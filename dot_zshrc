@@ -46,7 +46,7 @@ fi
 source $HOME/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 # antigen bundle git
@@ -79,3 +79,8 @@ alias ll="ls -ll"
 # FNM and NodeJS
 
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Zoxide
+
+eval "$(zoxide init zsh)"
+
