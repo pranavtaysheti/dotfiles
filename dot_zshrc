@@ -77,10 +77,11 @@ alias neofetch="fastfetch"
 alias ll="ls -ll"
 
 # FNM and NodeJS
-
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Zoxide
-
 eval "$(zoxide init zsh)"
+
+# Direnv
+eval "$(direnv hook zsh)"
 
