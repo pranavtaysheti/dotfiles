@@ -1,2 +1,5 @@
 python-up:
     uv python install 3 -U --default
+
+node-up:
+    fnm install --lts --use
