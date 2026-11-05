@@ -49,16 +49,16 @@ source $HOME/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle chezmoi
-antigen bundle gh
-antigen bundle vscode
-antigen bundle zoxide
-antigen bundle ssh
-antigen bundle command-not-found
-antigen bundle direnv
-antigen bundle python
-antigen bundle atuinsh/atuin@main
+# antigen bundle git
+# antigen bundle chezmoi
+# antigen bundle gh
+# antigen bundle vscode
+# antigen bundle zoxide
+# antigen bundle ssh
+# antigen bundle command-not-found
+# antigen bundle direnv
+# antigen bundle python
+# antigen bundle atuinsh/atuin@main
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
