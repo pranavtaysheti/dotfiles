@@ -8,7 +8,5 @@ python-upgrade:
 node-upgrade:
     fnm install --lts --use
 
-python-datascience:
-    cd ./DataScience
-    python
-    
+python-datascience *args:
+    ~/DataScience/.venv/bin/python {{args}}
