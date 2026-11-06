@@ -75,6 +75,7 @@ fi
 
 alias neofetch="fastfetch"
 alias ll="ls -ll"
+alias j="just"
 
 # FNM and NodeJS
 eval "$(fnm env --use-on-cd --shell zsh)"
