@@ -10,7 +10,7 @@ upgrade-node:
     fnm install --lts --use
 
 activate-python-datascience *args:
-    ~/DataScience/.venv/bin/python {{args}}
+    .ds-venv/bin/python {{args}}
 
 upgrade-python-datascience: upgrade-python
     uv venv .ds-venv --clear
