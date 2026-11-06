@@ -14,4 +14,4 @@ activate-python-datascience *args:
 
 upgrade-python-datascience: upgrade-python
     uv venv .ds-venv --clear
-    uv pip sync ~/.requirements
+    uv pip sync ~/.requirements --python .ds-venv
