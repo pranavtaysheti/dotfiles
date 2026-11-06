@@ -1,12 +1,17 @@
 alias ds := python-datascience
-alias py-up := python-upgrade
-alias node-up := node-upgrade
+alias py-up := upgrade-python
+alias node-up := upgrade-node
+alias ds-up := upgrade-python-datascience
 
-python-upgrade:
+upgrade-python:
     uv python install 3 -U --default
 
-node-upgrade:
+upgrade-node:
     fnm install --lts --use
 
-python-datascience *args:
+activate-python-datascience *args:
     ~/DataScience/.venv/bin/python {{args}}
+
+upgrade-python-datascience: upgrade-python
+    uv venv .ds-venv --clear
+    uv pip sync ~/.requirements
