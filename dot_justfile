@@ -1,4 +1,4 @@
-alias ds := python-datascience
+alias ds := activate-python-datascience
 alias py-up := upgrade-python
 alias node-up := upgrade-node
 alias ds-up := upgrade-python-datascience
